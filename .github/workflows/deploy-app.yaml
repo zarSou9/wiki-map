@@ -6,12 +6,7 @@ env:
   DOCKER_IMAGE_URL: us-central1-docker.pkg.dev/h-t-d-a-f-a-t-g-c-r/custom-fastapi/custom-fastapi
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
   dockerize-and-deploy:
