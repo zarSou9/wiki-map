@@ -1,0 +1,13 @@
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - build
+      - -f
+      - Dockerfile
+      - -t
+      - us-east1-docker.pkg.dev/wiki-map-455820/wiki-map-api/wiki-map-api:latest
+      - .
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - push
+      - us-east1-docker.pkg.dev/wiki-map-455820/wiki-map-api/wiki-map-api:latest

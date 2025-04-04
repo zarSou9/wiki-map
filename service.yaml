@@ -1,0 +1,12 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: wiki-map-api-service
+spec:
+  template:
+    spec:
+      containers:
+        - image: us-east1-docker.pkg.dev/wiki-map-455820/wiki-map-api/wiki-map-api:latest
+          env:
+          ports:
+            - containerPort: 4000

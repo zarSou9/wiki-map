@@ -8,6 +8,7 @@ WORKDIR /usr/src/app
 # install dependencies
 COPY ./requirements.txt ./
 
+RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 # copy src code
