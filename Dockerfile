@@ -16,4 +16,4 @@ COPY ./wiki_map ./wiki_map
 EXPOSE 4000
 
 # start the server
-CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "4000", "--proxy-headers"]
+CMD ["uvicorn", "wiki_map.main:app", "--host", "0.0.0.0", "--port", "4000", "--proxy-headers"]
